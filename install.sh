@@ -14,12 +14,12 @@ pip install cloudscraper
 
 # 3. Download the Python script to internal storage
 mkdir -p ~/.animesalt-dl
-curl -sL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/animesalt-dl/main/animesalt_dl.py -o ~/.animesalt-dl/animesalt_dl.py
+curl -sL https://raw.githubusercontent.com/GUGUGAGA1423/termux-dl/main/get_mega.py -o ~/.termux-dl/get_mega.py
 
 # 4. Create executable binary wrapper
 cat << 'EOF' > $PREFIX/bin/anime
 #!/data/data/com.termux/files/usr/bin/bash
-python3 ~/.animesalt-dl/animesalt_dl.py "$@"
+python3 ~/.termux-dl/get_mega.py "$@"
 EOF
 
 chmod +x $PREFIX/bin/anime
