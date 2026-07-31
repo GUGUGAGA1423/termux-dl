@@ -23,7 +23,7 @@ A fast, lightweight batch downloader and search CLI tool for **AnimeSalt**, desi
 Open **Termux** and run this single command:
 
 ```bash
-curl -sL [https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/animesalt-dl/main/install.sh](https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/animesalt-dl/main/install.sh) | bash
+curl -sL [https://raw.githubusercontent.com/GUGUGAGA1423/termux-dl/main/install.sh](https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/animesalt-dl/main/install.sh) | bash
 ```
 
 > **Note:** Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username!
