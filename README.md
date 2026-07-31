@@ -1,4 +1,4 @@
-# 🎬termux-dl
+# 🎬 termux-dl
 
 A fast, lightweight batch downloader and search CLI tool for **AnimeSalt**, designed for **Termux** and **Linux**.
 
