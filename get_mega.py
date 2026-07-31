@@ -1,4 +1,3 @@
-cat << 'EOF' > get_mega.py
 #!/usr/bin/env python3
 import os
 import re
@@ -31,12 +30,12 @@ if user_input.startswith("http://") or user_input.startswith("https://"):
 else:
     search_query = urllib.parse.quote_plus(user_input)
     search_url = f"https://animesalt.link/?s={search_query}"
-    
+
     print(f"\n🔄 Searching AnimeSalt for: '{user_input}'...")
     s_res = scraper.get(search_url, headers=headers)
-    
+
     found_items = re.findall(r'href=["\'](https?://animesalt\.link\/(?:series|movies)\/[^"\']+|\/(?:series|movies)\/[^"\']+)["\']', s_res.text)
-    
+
     unique_urls = []
     for item_link in found_items:
         full_url = f"https://animesalt.link{item_link}" if item_link.startswith("/") else item_link
@@ -115,7 +114,7 @@ if "/series/" in target_url:
             m = re.search(r'(\d+)x(\d+)', slug)
             if m:
                 max_s = max(max_s, int(m.group(1)))
-        
+
         for s in range(1, max_s + 1):
             for e in range(1, 13):
                 generated_urls.add(f"https://animesalt.link/episode/{series_slug}-{s}x{e}/")
@@ -249,4 +248,3 @@ for item_url in selected_pages:
         print(f"  ❌ Download error: {e}")
 
 print("\n🎉 Process finished!")
-EOF
